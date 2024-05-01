@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<h1>ログイン画面</h1>
+<!-- エラーメッセージ部分 -->
+<p style="color: red">{{error_message}}</p>
+
+<!-- ログインフォーム -->
+<form method="post">
+  <table border="1">
+    <tr>
+      <th>ユーザID</th>
+      <th>パスワード</th>
+    </tr>
+    <tr>
+      <td>
+        <input name="userid" type="text" value="{{userid}}" />
+      </td>
+      <td>
+        <input name="password" type="password" />
+      </td>
+    </tr>
+  </table>
+  <input type="submit" value="ログイン" />
+</form>
+<a href="/signup" role="button">新規ユーザ登録</a>
+{% endblock %}
